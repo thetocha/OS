@@ -4,7 +4,7 @@
 #include <chrono>
 
 int main(){
-    const int size = 5;
+    const int size = 25;
     Matrix matrix1(size,size);
     Matrix matrix2(size,size);
     Matrix result(size,size);
@@ -26,6 +26,7 @@ int main(){
         auto end = std::chrono::steady_clock::now();
 
         long long time = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+        std::cout << "Size of block: " << block_size << " " << "Time required to multiple: " << time << std:: endl;
     }
 
     return 0;
